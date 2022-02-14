@@ -1,0 +1,404 @@
+/* fonts */
+@font-face {
+    font-family: "Tavolga";
+    src: url("../fonts/Tavolga-Free.ttf");
+}
+@font-face {
+    font-family: "Gilroy Regular";
+    src: url("../fonts/Gilroy-Regular.ttf");
+}
+@font-face {
+    font-family: "Gilroy Medium";
+    src: url("../fonts/Gilroy-Medium.ttf");
+}
+@font-face {
+    font-family: "Gilroy Bold";
+    src: url("../fonts/Gilroy-Bold.ttf");
+}
+@font-face {
+    font-family: "Gilroy ExtraBold";
+    src: url("../fonts/Gilroy-Extrabold.ttf");
+}
+
+/* color scheme */
+@bg-color-light: #ffefef;
+@bg-color-dark: #eba8b1;
+@bg-color-the-darkest: #c0707c;
+@text-color-1: white;
+@text-color-2: #331907;
+@text-in-menu-color: #770B1D;
+@add-things-color: #821328;
+@label-color: #120A06;
+@right-text-color: #e3acb4;
+@btn-gradient-color-1: #71081E;
+@btn-gradient-color-2: #D7485C;
+@placeholder-color: #760C22;
+
+/* mixins */
+.info-text {
+    font-size: 18px;
+    font-family: "Gilroy Regular", sans-serif;
+    color: @text-color-2;
+    line-height: 1.556;
+}
+
+/* Could be mixins, but I don't want */
+.logo a{
+    font-size: 18px;
+    font-family: "Tavolga", sans-serif;
+    color: @text-color-1;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+.tel {
+    font-size: 16px;
+    font-family: "Gilroy Bold", sans-serif;
+    color: @text-color-1;
+    letter-spacing: 0.02em;
+}
+.red-btn {
+    background-image: -moz-linear-gradient( 90deg, @btn-gradient-color-1 0%, @btn-gradient-color-2 100%);
+    background-image: -webkit-linear-gradient( 90deg, @btn-gradient-color-1 0%, @btn-gradient-color-2 100%);
+    background-image: -ms-linear-gradient( 90deg, @btn-gradient-color-1 0%, @btn-gradient-color-2 100%);
+    font-family: "Gilroy Bold", sans-serif;
+    letter-spacing: 0.02em;
+    color: @text-color-1;
+    border: none;
+}
+.red-btn:hover {
+    cursor: pointer;
+}
+h2 {
+    margin: 0;
+    font-size: 45px;
+    font-family: "Tavolga", sans-serif;
+}
+
+/* styles */
+body {
+    margin: 0;
+}
+#main {
+    background: @bg-color-dark;
+    #main-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        header {
+            display: flex;
+            padding-top: 38px;
+            align-items: center;
+            .tel {
+                margin-left: 294px;
+            }
+            #burger {
+                flex-direction: column;
+                justify-content: space-between;
+                height: 22px;
+                display: none;
+                .burger-line {
+                    width: 40px;
+                    height: 2px;
+                    background: @add-things-color;
+                }
+            }
+            #main-menu {
+                margin-left: 212px;
+                svg {
+                    display: none;
+                }
+                .main-menu-items {
+                    margin: 0 20px;
+                    font-size: 14px;
+                    font-family: "Gilroy Medium", sans-serif;
+                    color: @text-in-menu-color;
+                    letter-spacing: 0.04em;
+                    text-decoration: none;
+                    position: relative;
+                    &:hover::before {
+                        content: " ";
+                        display: block;
+                        height: 2px;
+                        width: 100%;
+                        background: @add-things-color;
+                        position: absolute;
+                        bottom: -3px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        #main-content {
+            display: flex;
+            margin-top: 156px;
+            padding-bottom: 108px;
+            color: @text-color-1;
+            font-family: "Tavolga", sans-serif;
+            h1 {
+                margin: 17px 0 0 0;
+                max-width: 580px;
+                font-size: 55px;
+                line-height: 1.091;
+            }
+            #subheading {
+                font-size: 18px;
+                line-height: 1.389;
+                max-width: 345px;
+                margin-top: 59px;
+                margin-bottom: 80px;
+            }
+            #main-action-btn {
+                height: 60px;
+                width: 240px;
+                border-radius: 30px;
+                font-size: 18px;
+            }
+            #main-content-image {
+                margin-left: 14px;
+                img {
+                    width: 529px;
+                }
+            }
+        }
+    }
+}
+#about-us {
+    background: @bg-color-light;
+    #about-us-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding-top: 120px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        h2 {
+            color: @text-color-2;
+            line-height: 1.222;
+            max-width: 475px;
+        }
+        #about-us-info-text {
+            max-width: 400px;
+            margin-top: 60px;
+            .info-text;
+        }
+    }
+}
+#advantages {
+    background: @bg-color-light;
+    #advantages-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding-bottom: 120px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .advantage {
+            margin-top: 80px;
+            .number-bg {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background: @add-things-color;
+                text-align: center;
+                .number-text {
+                    font-size: 60px;
+                    font-family: "Gilroy ExtraBold", sans-serif;
+                    color: @text-color-1;
+                    position: relative;
+                    top: 11px;
+                }
+            }
+            .advantage-heading {
+                margin-top: 13px;
+                margin-bottom: 20px;
+                font-size: 20px;
+                font-family: "Gilroy ExtraBold", sans-serif;
+                color: @text-color-2;
+            }
+            .advantage-description {
+                font-size: 15px;
+                font-family: "Gilroy Medium", sans-serif;
+                color: @text-color-2;
+                line-height: 1.333;
+                max-width: 215px;
+            }
+        }
+    }
+}
+#price {
+    background: @bg-color-dark;
+    #price-container {
+        max-width: 1170px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 120px 0;
+        h2 {
+            color: @text-color-1;
+        }
+        #macaroons {
+            margin-top: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .macaroon {
+                margin: 136px 15px 0 15px;
+                border: 2px solid @text-color-1;
+                box-sizing: border-box;
+                width: 259px;
+                border-radius: 20px;
+                .macaroon-img {
+                    height: 124px;
+                    img {
+                        position: relative;
+                        top: -59px;
+                    }
+                }
+                .macaroon-heading {
+                    margin-top: -15px;
+                    font-size: 18px;
+                    font-family: "Tavolga", sans-serif;
+                    color: @text-color-1;
+                }
+                .macaroon-description {
+                    margin: 26px 20px 27px 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .amount-and-cost {
+                        text-align: left;
+                        font-size: 15px;
+                        font-family: "Gilroy Regular", sans-serif;
+                        color: @text-color-1;
+                        .cost {
+                            margin-top: 16px;
+                        }
+                    }
+                    button {
+                        width: 130px;
+                        height: 50px;
+                        border-radius: 50px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+#order {
+    background: @bg-color-light;
+    #order-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 97px 0 120px 0;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        #big_strawberry {
+            position: absolute;
+            top: 141px;
+            left: 0;
+        }
+        #small_strawberry {
+            position: absolute;
+            bottom: 194px;
+            right: 170px;
+        }
+        #order-img {
+            img{
+                position: relative;
+                top: 70px;
+                right: 146px;
+                width: 408px;
+            }
+        }
+        #order-info {
+            margin-left: 15px;
+            h2 {
+                color: @text-color-2;
+            }
+            #order-instructions {
+                margin-top: 40px;
+                margin-bottom: 48px;
+                max-width: 404px;
+                .info-text;
+            }
+            #order-form {
+                width: 294px;
+                input {
+                    width: 294px;
+                    height: 60px;
+                    box-sizing: border-box;
+                    border: 1px solid @add-things-color;
+                    border-radius: 30px;
+                    font-size: 15px;
+                    font-family: "Gilroy Bold", sans-serif;
+                    padding: 23px 25px;
+                    margin-bottom: 15px;
+                    background: @bg-color-light;
+                    outline: none;
+                    &::placeholder {
+                        color: @placeholder-color;
+                    }
+                }
+                .label {
+                    font-size: 18px;
+                    font-family: "Gilroy Bold", sans-serif;
+                    color: @label-color;
+                    margin-bottom: 20px;
+                    margin-top: 25px;
+                }
+                button {
+                    width: 294px;
+                    height: 60px;
+                    border-radius: 30px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+footer {
+    background: @bg-color-the-darkest;
+    #footer-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 73px 0 62px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #rights-375 {
+            display: none;
+        }
+        #footer-logo {
+            display: flex;
+            flex-direction: column;
+            #rights {
+                margin-top: 19px;
+            }
+            .rights-text {
+                font-size: 12px;
+                font-family: "Gilroy Regular", sans-serif;
+                color: @right-text-color;
+            }
+        }
+        #instagram {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            svg {
+                fill: @text-color-1;
+                width: 35px;
+                height: 35px;
+            }
+            #instagram-text {
+                font-size: 16px;
+                font-family: "Gilroy Bold", sans-serif;
+                color: @text-color-1;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+@import "adaptive";
+@import "theme";

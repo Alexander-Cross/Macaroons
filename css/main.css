@@ -1,0 +1,698 @@
+/* fonts */
+@font-face {
+  font-family: "Tavolga";
+  src: url("../fonts/Tavolga-Free.ttf");
+}
+@font-face {
+  font-family: "Gilroy Regular";
+  src: url("../fonts/Gilroy-Regular.ttf");
+}
+@font-face {
+  font-family: "Gilroy Medium";
+  src: url("../fonts/Gilroy-Medium.ttf");
+}
+@font-face {
+  font-family: "Gilroy Bold";
+  src: url("../fonts/Gilroy-Bold.ttf");
+}
+@font-face {
+  font-family: "Gilroy ExtraBold";
+  src: url("../fonts/Gilroy-Extrabold.ttf");
+}
+/* color scheme */
+/* mixins */
+.info-text {
+  font-size: 18px;
+  font-family: "Gilroy Regular", sans-serif;
+  color: #024a64;
+  line-height: 1.556;
+}
+/* Could be mixins, but I don't want */
+.logo a {
+  font-size: 18px;
+  font-family: "Tavolga", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.tel {
+  font-size: 16px;
+  font-family: "Gilroy Bold", sans-serif;
+  color: white;
+  letter-spacing: 0.02em;
+}
+.red-btn {
+  background-image: -moz-linear-gradient(90deg, #f87682 0%, #ffa7ad 100%);
+  background-image: -webkit-linear-gradient(90deg, #f87682 0%, #ffa7ad 100%);
+  background-image: -ms-linear-gradient(90deg, #f87682 0%, #ffa7ad 100%);
+  font-family: "Gilroy Bold", sans-serif;
+  letter-spacing: 0.02em;
+  color: white;
+  border: none;
+}
+.red-btn:hover {
+  cursor: pointer;
+}
+h2 {
+  margin: 0;
+  font-size: 45px;
+  font-family: "Tavolga", sans-serif;
+}
+/* styles */
+body {
+  margin: 0;
+}
+#main {
+  background: #44a1c9;
+}
+#main #main-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+#main #main-container header {
+  display: flex;
+  padding-top: 38px;
+  align-items: center;
+}
+#main #main-container header .tel {
+  margin-left: 294px;
+}
+#main #main-container header #burger {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22px;
+  display: none;
+}
+#main #main-container header #burger .burger-line {
+  width: 40px;
+  height: 2px;
+  background: #7FE7CC;
+}
+#main #main-container header #main-menu {
+  margin-left: 212px;
+}
+#main #main-container header #main-menu svg {
+  display: none;
+}
+#main #main-container header #main-menu .main-menu-items {
+  margin: 0 20px;
+  font-size: 14px;
+  font-family: "Gilroy Medium", sans-serif;
+  color: #95fafa;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  position: relative;
+}
+#main #main-container header #main-menu .main-menu-items:hover::before {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #7FE7CC;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+#main #main-container #main-content {
+  display: flex;
+  margin-top: 156px;
+  padding-bottom: 108px;
+  color: white;
+  font-family: "Tavolga", sans-serif;
+}
+#main #main-container #main-content h1 {
+  margin: 17px 0 0 0;
+  max-width: 580px;
+  font-size: 55px;
+  line-height: 1.091;
+}
+#main #main-container #main-content #subheading {
+  font-size: 18px;
+  line-height: 1.389;
+  max-width: 345px;
+  margin-top: 59px;
+  margin-bottom: 80px;
+}
+#main #main-container #main-content #main-action-btn {
+  height: 60px;
+  width: 240px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+#main #main-container #main-content #main-content-image {
+  margin-left: 14px;
+}
+#main #main-container #main-content #main-content-image img {
+  width: 529px;
+}
+#about-us {
+  background: #F1F9F9;
+}
+#about-us #about-us-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#about-us #about-us-container h2 {
+  color: #024a64;
+  line-height: 1.222;
+  max-width: 475px;
+}
+#about-us #about-us-container #about-us-info-text {
+  max-width: 400px;
+  margin-top: 60px;
+  font-size: 18px;
+  font-family: "Gilroy Regular", sans-serif;
+  color: #024a64;
+  line-height: 1.556;
+}
+#advantages {
+  background: #F1F9F9;
+}
+#advantages #advantages-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#advantages #advantages-container .advantage {
+  margin-top: 80px;
+}
+#advantages #advantages-container .advantage .number-bg {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #7FE7CC;
+  text-align: center;
+}
+#advantages #advantages-container .advantage .number-bg .number-text {
+  font-size: 60px;
+  font-family: "Gilroy ExtraBold", sans-serif;
+  color: white;
+  position: relative;
+  top: 11px;
+}
+#advantages #advantages-container .advantage .advantage-heading {
+  margin-top: 13px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: "Gilroy ExtraBold", sans-serif;
+  color: #024a64;
+}
+#advantages #advantages-container .advantage .advantage-description {
+  font-size: 15px;
+  font-family: "Gilroy Medium", sans-serif;
+  color: #024a64;
+  line-height: 1.333;
+  max-width: 215px;
+}
+#price {
+  background: #44a1c9;
+}
+#price #price-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 120px 0;
+}
+#price #price-container h2 {
+  color: white;
+}
+#price #price-container #macaroons {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#price #price-container #macaroons .macaroon {
+  margin: 136px 15px 0 15px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  width: 259px;
+  border-radius: 20px;
+}
+#price #price-container #macaroons .macaroon .macaroon-img {
+  height: 124px;
+}
+#price #price-container #macaroons .macaroon .macaroon-img img {
+  position: relative;
+  top: -59px;
+}
+#price #price-container #macaroons .macaroon .macaroon-heading {
+  margin-top: -15px;
+  font-size: 18px;
+  font-family: "Tavolga", sans-serif;
+  color: white;
+}
+#price #price-container #macaroons .macaroon .macaroon-description {
+  margin: 26px 20px 27px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#price #price-container #macaroons .macaroon .macaroon-description .amount-and-cost {
+  text-align: left;
+  font-size: 15px;
+  font-family: "Gilroy Regular", sans-serif;
+  color: white;
+}
+#price #price-container #macaroons .macaroon .macaroon-description .amount-and-cost .cost {
+  margin-top: 16px;
+}
+#price #price-container #macaroons .macaroon .macaroon-description button {
+  width: 130px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 16px;
+}
+#order {
+  background: #F1F9F9;
+}
+#order #order-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 97px 0 120px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#order #order-container #big_strawberry {
+  position: absolute;
+  top: 141px;
+  left: 0;
+}
+#order #order-container #small_strawberry {
+  position: absolute;
+  bottom: 194px;
+  right: 170px;
+}
+#order #order-container #order-img img {
+  position: relative;
+  top: 70px;
+  right: 146px;
+  width: 408px;
+}
+#order #order-container #order-info {
+  margin-left: 15px;
+}
+#order #order-container #order-info h2 {
+  color: #024a64;
+}
+#order #order-container #order-info #order-instructions {
+  margin-top: 40px;
+  margin-bottom: 48px;
+  max-width: 404px;
+  font-size: 18px;
+  font-family: "Gilroy Regular", sans-serif;
+  color: #024a64;
+  line-height: 1.556;
+}
+#order #order-container #order-info #order-form {
+  width: 294px;
+}
+#order #order-container #order-info #order-form input {
+  width: 294px;
+  height: 60px;
+  box-sizing: border-box;
+  border: 1px solid #7FE7CC;
+  border-radius: 30px;
+  font-size: 15px;
+  font-family: "Gilroy Bold", sans-serif;
+  padding: 23px 25px;
+  margin-bottom: 15px;
+  background: #F1F9F9;
+  outline: none;
+}
+#order #order-container #order-info #order-form input::placeholder {
+  color: #004635;
+}
+#order #order-container #order-info #order-form .label {
+  font-size: 18px;
+  font-family: "Gilroy Bold", sans-serif;
+  color: #001115;
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+#order #order-container #order-info #order-form button {
+  width: 294px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+footer {
+  background: #1e738c;
+}
+footer #footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 73px 0 62px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer #footer-container #rights-375 {
+  display: none;
+}
+footer #footer-container #footer-logo {
+  display: flex;
+  flex-direction: column;
+}
+footer #footer-container #footer-logo #rights {
+  margin-top: 19px;
+}
+footer #footer-container #footer-logo .rights-text {
+  font-size: 12px;
+  font-family: "Gilroy Regular", sans-serif;
+  color: #7FE7CC;
+}
+footer #footer-container #instagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer #footer-container #instagram svg {
+  fill: white;
+  width: 35px;
+  height: 35px;
+}
+footer #footer-container #instagram #instagram-text {
+  font-size: 16px;
+  font-family: "Gilroy Bold", sans-serif;
+  color: white;
+  margin-top: 15px;
+}
+/*mixins*/
+.margin-x-20 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.margin-x-15 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/*styles*/
+/*1021-1170 big tablet*/
+@media screen and (max-width: 1170px) {
+  #main #main-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #main #main-container header #main-menu {
+    margin-left: 83px;
+  }
+  #main #main-container header .tel {
+    display: none;
+  }
+  #main #main-container #main-content {
+    margin-top: 102px;
+  }
+  #main #main-container #main-content h1 {
+    margin: 0;
+  }
+  #main #main-container #main-content #subheading {
+    margin-top: 73px;
+    margin-bottom: 41px;
+  }
+  #main #main-container #main-content #main-content-image {
+    margin-left: 0;
+  }
+  #main #main-container #main-content #main-content-image img {
+    width: 400px;
+    /*уменьшил для этого промежутка*/
+  }
+  #about-us #about-us-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #about-us #about-us-container h2 {
+    margin: 0 auto;
+  }
+  #about-us #about-us-container #about-us-info-text {
+    margin: 60px auto 40px auto;
+    max-width: 668px;
+  }
+  #about-us #about-us-container #about-us-img img {
+    width: 302px;
+  }
+  #advantages #advantages-container {
+    max-width: 495px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #advantages #advantages-container .advantage .number-bg {
+    margin: 0 auto;
+  }
+  #price #price-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #price #price-container #macaroons {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  #order #order-container {
+    justify-content: flex-start;
+    padding-top: 120px;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  #order #order-container #big_strawberry {
+    top: 337px;
+    left: 372px;
+  }
+  #order #order-container #small_strawberry {
+    top: 231px;
+    left: 610px;
+  }
+  #order #order-container #order-info {
+    margin-left: 20px;
+    order: 1;
+    flex-shrink: 0;
+  }
+  #order #order-container #order-img {
+    order: 2;
+    position: relative;
+    width: 343px;
+  }
+  #order #order-container #order-img img {
+    position: absolute;
+    top: 240px;
+    right: 19px;
+    width: 352px;
+  }
+  footer #footer-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 76px 0 59px 0;
+  }
+}
+/*768-1020 tablet*/
+@media screen and (max-width: 1020px) {
+  #main #main-container #main-content {
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 420px;
+  }
+  #main #main-container #main-content #main-content-image img {
+    position: absolute;
+    bottom: 62px;
+    left: 164px;
+    width: 529px;
+  }
+}
+/*375-767 mobile*/
+@media screen and (max-width: 767px) {
+  #main #main-container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #main #main-container header {
+    padding-top: 34px;
+    justify-content: space-between;
+  }
+  #main #main-container header #main-menu {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding-top: 60px;
+    background: rgba(24, 12, 3, 0.92);
+    top: 0;
+    left: 0;
+  }
+  #main #main-container header #main-menu svg {
+    display: block;
+    fill: white;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 27px;
+    right: 27px;
+  }
+  #main #main-container header #main-menu.open {
+    display: inline-flex;
+  }
+  #main #main-container header #main-menu.open a {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  #main #main-container header #burger {
+    display: inline-flex;
+  }
+  #main #main-container #main-content {
+    align-items: center;
+    text-align: center;
+    margin-top: 87px;
+    padding-bottom: 43px;
+  }
+  #main #main-container #main-content h1 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+  #main #main-container #main-content #subheading {
+    margin: 40px auto;
+    font-size: 16px;
+    line-height: 1.438;
+  }
+  #main #main-container #main-content #main-content-image img {
+    position: static;
+    width: 250px;
+    margin-top: 38px;
+  }
+  #about-us #about-us-container {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 100px;
+    padding-bottom: 16px;
+  }
+  #about-us #about-us-container h2 {
+    font-size: 30px;
+    line-height: 1.167;
+  }
+  #about-us #about-us-container #about-us-info-text {
+    margin-top: 40px;
+    margin-bottom: 59px;
+    font-size: 16px;
+    line-height: 1.437;
+  }
+  #advantages #advantages-container {
+    max-width: 345px;
+    padding-bottom: 100px;
+  }
+  #advantages #advantages-container .advantage {
+    margin-top: 36px;
+  }
+  #advantages #advantages-container .advantage .advantage-heading {
+    font-size: 18px;
+  }
+  #advantages #advantages-container .advantage .advantage-description {
+    max-width: 165px;
+    font-size: 13px;
+    line-height: 1.385;
+  }
+  #price #price-container {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 100px 0;
+  }
+  #price #price-container h2 {
+    margin-bottom: -14px;
+    font-size: 30px;
+  }
+  #order #order-container {
+    padding-top: 100px;
+    padding-bottom: 77px;
+    display: block;
+  }
+  #order #order-container #order-info {
+    max-width: 344px;
+    margin: 0 auto;
+  }
+  #order #order-container #order-info h2 {
+    font-size: 30px;
+  }
+  #order #order-container #order-info #order-instructions {
+    margin-top: 44px;
+    margin-bottom: 60px;
+    font-size: 16px;
+    line-height: 1.437;
+  }
+  #order #order-container #order-info #order-form {
+    width: 344px;
+  }
+  #order #order-container #order-info #order-form input,
+  #order #order-container #order-info #order-form button {
+    width: 344px;
+  }
+  #order #order-container #order-img,
+  #order #order-container #small_strawberry {
+    display: none;
+  }
+  #order #order-container #big_strawberry {
+    top: 229px;
+    left: 290px;
+  }
+  footer #footer-container {
+    margin-left: 15px;
+    margin-right: 15px;
+    flex-direction: column;
+    padding: 50px 0;
+  }
+  footer #footer-container #footer-logo {
+    align-items: center;
+  }
+  footer #footer-container #footer-logo #rights {
+    display: none;
+  }
+  footer #footer-container #rights-375 {
+    display: inline-flex;
+    order: 4;
+    margin-top: 40px;
+  }
+  footer #footer-container #rights-375.rights-text {
+    font-size: 12px;
+    font-family: "Gilroy Regular", sans-serif;
+    color: #7FE7CC;
+  }
+  footer #footer-container .tel {
+    order: 2;
+    margin-top: 40px;
+  }
+  footer #footer-container #instagram {
+    margin-top: 40px;
+    order: 3;
+  }
+}
+/*320-374 mobile-mini*/
+@media screen and (max-width: 374px) {
+  #advantages #advantages-container {
+    max-width: 165px;
+  }
+  #order #order-container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #order #order-container #big_strawberry {
+    display: none;
+  }
+  #order #order-container #order-info #order-form {
+    width: 290px;
+  }
+  #order #order-container #order-info #order-form input,
+  #order #order-container #order-info #order-form button {
+    width: 290px;
+  }
+}
